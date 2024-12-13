@@ -37,7 +37,7 @@ public class Main {
         System.out.println("Mức lương trung bình của công ty" + sumemp);
 
         listOfemp(empnv,sumemp);
-        double sumEmp = allEmpPo(employees);
+        double sumEmp = allEmpPo(empnv);
         System.out.println("Tổng lương thực nhân viên bán thời gian " + sumEmp);
 
 
@@ -45,9 +45,10 @@ public class Main {
 
     }
 
-    private static double allEmpPo(List<NhanVien> employees) {
+    // sử lý theo mảng
+    private static double allEmpPo(NhanVien[] empnv) {
         double sumn = 0;
-        for (NhanVien nv : employees) {
+        for (NhanVien nv : empnv) {
             if (nv instanceof  NhanVienFulltime){
                 NhanVienFulltime nvFulltime = (NhanVienFulltime) nv;
                 sumn += nvFulltime.calculateSalaryF();
@@ -55,6 +56,7 @@ public class Main {
         }
         return sumn;
     }
+
 
     private static void listOfemp(NhanVien[] empnv, double sumemp) {
        double salary = 0;
@@ -85,7 +87,7 @@ public class Main {
     }
 
 
-    // theo list
+    // sử lý theo list
 
     private static double allEmployess(List<NhanVien> employees) {
         double toatl = 0;

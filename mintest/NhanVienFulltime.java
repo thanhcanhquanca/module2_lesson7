@@ -46,7 +46,7 @@ public class NhanVienFulltime extends NhanVien{
         this.fixedSalary = fixedSalary;
     }
 
-    public int calculateSalaryF() {
+    public int calculateSalary() {
         return fixedSalary + (bonusAmount - penaltyAmount);
     }
 

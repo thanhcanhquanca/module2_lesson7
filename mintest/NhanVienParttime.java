@@ -20,8 +20,8 @@ public class NhanVienParttime extends NhanVien{
         this.workingHours = workingHours;
     }
 
-    public int calculateSalaryP() {
-        return workingHours * 100000;  // each hour = 100000
+    public int calculateSalary() {
+        return workingHours * 100000;
     }
 
 

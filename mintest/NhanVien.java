@@ -1,6 +1,6 @@
 package mintest;
 
-public class NhanVien {
+public abstract class NhanVien {
     private int employeeCode;
     private String fullName ;
     private int age;
@@ -58,5 +58,5 @@ public class NhanVien {
         this.email = email;
     }
 
-
+    public abstract int calculateSalary();
 }
